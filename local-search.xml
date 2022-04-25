@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title>Nodejs代理错误</title>
+    <link href="/2022/04/25/Nodejs%E4%BB%A3%E7%90%86%E9%94%99%E8%AF%AF/"/>
+    <url>/2022/04/25/Nodejs%E4%BB%A3%E7%90%86%E9%94%99%E8%AF%AF/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Nodejs代理问题"><a href="#Nodejs代理问题" class="headerlink" title="Nodejs代理问题 "></a>Nodejs代理问题 <img src="https://img-blog.csdnimg.cn/20210420135340191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1FpdUhhb3FpYW4=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></h1><p>图片来源于:<a href="https://blog.csdn.net/QiuHaoqian/article/details/115904683">Node.js 代理导致的报错问_浩骞的博客-CSDN博客</a></p><hr><p> 1.将registry设置为淘宝源</p><p><code>npm config set registry https://registry.npm.taobao.org</code></p><p>2.将proxy设置为空</p><p><code>npm config set proxy null</code></p><p>3.将https-proxy设置为空</p><p><code>npm config set https-proxy null</code></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ktor chat server</title>
     <link href="/2022/02/02/Ktor-chat-server/"/>
     <url>/2022/02/02/Ktor-chat-server/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/Smartdousha/chat-server">A ktor websocket chat server,my first ktor programming work. </a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/Smartdousha/chat-server">GitHub - Smartdousha&#x2F;chat-server: A ktor websocket chat server,my first ktor programming work.</a></p><p>Ktor聊天室服务端程序</p>]]></content>
     
     
     
