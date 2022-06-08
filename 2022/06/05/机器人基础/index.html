@@ -24,7 +24,7 @@
 <meta property="og:description" content="机器人实训日记如何回归原点具体步骤 ControlPanel  Language-&gt;Chinese  OK  DeviceNet Device-&gt;板卡类型改成d652  address-&gt;10  编辑程序  新建模块  新建例行程序  添加MoveAbsj指令  点击*号，新建Home点  点击v1000，改成v200  点击z50，改成fine  调试  PP移至例行程序  按">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-04T23:28:11.000Z">
-<meta property="article:modified_time" content="2022-06-04T23:40:45.949Z">
+<meta property="article:modified_time" content="2022-06-08T06:55:32.114Z">
 <meta property="article:author" content="豆沙">
 <meta property="article:tag" content="机器人">
 <meta name="twitter:card" content="summary_large_image">
@@ -197,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.6k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 分钟
+      14 分钟
     </span>
   
 
@@ -326,7 +326,7 @@ endmodule
 </li>
 <li><p>添加回原点指令</p>
 <p>具体代码</p>
-<figure class="highlight pascal"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs pascal">Module fuck<br>    proc main()<span class="hljs-comment">&#123;</span><br><span class="hljs-comment">        注释：回到原点</span><br><span class="hljs-comment">        MoveAbsj,home,v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到右半边原点</span><br><span class="hljs-comment">        MoveAbsj,home1,v200,fine,tool0;</span><br><span class="hljs-comment">    &#125;</span><br>EndModule<br></code></pre></td></tr></table></figure>
+<figure class="highlight pascal"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs pascal">Module fuck<br>    proc main()<span class="hljs-comment">&#123;</span><br><span class="hljs-comment">        //：回到原点</span><br><span class="hljs-comment">        MoveAbsj,home,v200,fine,tool0;</span><br><span class="hljs-comment">        //：回到右半边原点</span><br><span class="hljs-comment">        MoveAbsj,home1,v200,fine,tool0;</span><br><span class="hljs-comment">    &#125;</span><br>EndModule<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>程序数据</p>
 </li>
@@ -334,9 +334,9 @@ endmodule
 </li>
 <li><p>程序编辑</p>
 <p>具体代码</p>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs pascal">Module fuck<br>    proc main()<span class="hljs-comment">&#123;</span><br><span class="hljs-comment">        注释：回到原点</span><br><span class="hljs-comment">        MoveAbsj,home,v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到右半边原点</span><br><span class="hljs-comment">        MoveAbsj,home1,v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到距离p10点的10毫米上方</span><br><span class="hljs-comment">        Movel,offs(p10,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到距离p20点的10毫米上方</span><br><span class="hljs-comment">        Movel,offs(p20,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到距离p30点的10毫米上方</span><br><span class="hljs-comment">        Movel,offs(p30,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到距离p40点的10毫米上方</span><br><span class="hljs-comment">        Movel offs(p40,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        注释：回到距离p10点的10毫米上方</span><br><span class="hljs-comment">        Movel,offs(p10,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">    &#125;</span><br>EndModule<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs pascal">Module fuck<br>    proc main()<span class="hljs-comment">&#123;</span><br><span class="hljs-comment">        // 回到原点</span><br><span class="hljs-comment">        MoveAbsj,home,v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到右半边原点</span><br><span class="hljs-comment">        MoveAbsj,home1,v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到距离p10点的10毫米上方</span><br><span class="hljs-comment">        MoveL,offs(p10,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到距离p20点的10毫米上方</span><br><span class="hljs-comment">        MoveL,offs(p20,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到距离p30点的10毫米上方</span><br><span class="hljs-comment">        MoveL,offs(p30,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到距离p40点的10毫米上方</span><br><span class="hljs-comment">        MoveL offs(p40,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">        // 回到距离p10点的10毫米上方</span><br><span class="hljs-comment">        MoveL,offs(p10,0,0,10),v200,fine,tool0;</span><br><span class="hljs-comment">    &#125;</span><br>EndModule<br></code></pre></td></tr></table></figure></li>
 </ol>
-
+<h2 id="如何拿放工具"><a href="#如何拿放工具" class="headerlink" title="如何拿放工具"></a>如何拿放工具</h2><h3 id="如何拿放胶笔"><a href="#如何拿放胶笔" class="headerlink" title="如何拿放胶笔"></a>如何拿放胶笔</h3><h4 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs pascal">Module fuck<br>    MoveAbsj,phome,v200,fine,tool0;<br>    MoveAbsj,phome1,v200,fine,tool0;<br>    <span class="hljs-comment">//移动到胶笔的上方200毫米处</span><br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">200</span>),v50,fine,tool0;<br>    <span class="hljs-comment">//移动到胶笔的上方50毫米处</span><br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">50</span>),v50,fine,tool0;<br>    <span class="hljs-comment">//移动到胶笔的上方0毫米处</span><br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>),v50,fine,tool0;<br>    <span class="hljs-comment">//等待0.5秒</span><br>    WaitTime <span class="hljs-number">0.5</span>;<br>    <span class="hljs-comment">//将handchange_start置位</span><br>    <span class="hljs-keyword">set</span> handchange_start;<br>    WaitTime <span class="hljs-number">0.5</span>;<br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>),v50,fine,tool0;<br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">50</span>),v50,fine,tool0;<br>    MoveL offs(ptool3,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">200</span>),v50,fine,tool0;<br>EndModule<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
